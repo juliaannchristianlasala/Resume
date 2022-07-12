@@ -1,10 +1,26 @@
 {
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
+  "BASIC INFORMATION": [
+    {
+      "Picture": "",
+      "Name": "Julia-Ann Christian Ramirez Lasala",
+      "Age": "19 years old",
+      "Email": "jujualiah8@gmail.com",
+      "PhoneNumber": "0997-553-6926",
+      "HomeAddress": "#52 President Quezon Street, Barangay Commonwealth",
+      "City": "Quezon City",
+      "Province": "Metro Manila",
+      "PostalCode": "1121"
+    }
+  ],
+  "EDUCATION": [
+    {
+      "HighSchool": "North Fairview High School",
+      "HSSchoolYear": "S.Y. 2015-2019",
+      "SeniorHighSchool": "Metropolitan Institute of Arts and Sciences",
+      "Strand": "Science, Technology, Engineering and Mathematics",
+      "SHSSchoolYear": "S.Y. 2019-2021",
+      "College": "Polytechbic University of the Philippines",
+      "CSchoolYear": "S.Y. 2021-Present"
+    }
   ]
 }
