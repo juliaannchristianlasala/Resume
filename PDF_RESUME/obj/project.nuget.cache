@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HHS+B95FNlw1wI3xcAfibOCp9ds0Zfsw6BcE1+JUG2ZFARmA4vN/NnkYmK79FZBAjgMFQb/y1SMDePdO8EKagw==",
+  "dgSpecHash": "687/T5rI6VUsTwtZbfRwOShMldqFf/Vmon9gHotHq6iFEQiGnyxnTbub7EbGYrhW6C67pEphQgJEnWZ69mcMKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\JULIA-ANN\\source\\repos\\PDF_RESUME\\PDF_RESUME\\PDF_RESUME.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\JULIA-ANN\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
