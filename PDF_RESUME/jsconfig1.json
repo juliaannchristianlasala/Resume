@@ -22,5 +22,17 @@
       "College": "Polytechbic University of the Philippines",
       "CSchoolYear": "S.Y. 2021-Present"
     }
+  ],
+  "SKILLS AND QUALIFICATIONS": [
+    {
+      "Skill1": "Creativity",
+      "Description1": "Ability to use imagination to generate new ideas",
+      "Skill2": "Conceptual",
+      "Description2": "Capacity to identify goals and analyze situation to overcome the problem more rapidly",
+      "Skill3": "Responsibility",
+      "Description3": "Accepts responsibility for the job and even acknowledges mistakes",
+      "Skill4": "Empathy",
+      "Description4": "Communicating and learning about other people to express thoughts and ideas through words, art, or other things"
+    }
   ]
 }
