@@ -64,6 +64,10 @@ namespace PDF_RESUME
             //EDUCATION
             jhschoollabel.Text = "Junior High School: " + resume.HighSchool;
             hssyearlabel.Text = "School Year: " + resume.HSSchoolYear;
+            shschoollabel.Text = "Senior High School: " + resume.SeniorHighSchool + " (" + resume.ShsStrand + ")";
+            shssyearlabel.Text = "School Year: " + resume.SHSSchoolYear;
+            collegelabel.Text = "College: " + resume.College + " (" + resume.Course + ")";
+            csyearlabel.Text = "School Year: " + resume.CSchoolYear;
         }
     } 
 }
