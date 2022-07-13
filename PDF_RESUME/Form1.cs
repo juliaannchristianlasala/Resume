@@ -68,6 +68,22 @@ namespace PDF_RESUME
             shssyearlabel.Text = "School Year: " + resume.SHSSchoolYear;
             collegelabel.Text = "College: " + resume.College + " (" + resume.Course + ")";
             csyearlabel.Text = "School Year: " + resume.CSchoolYear;
+
+            //SKILLS AND QUALIFICATIONS
+
+        }
+
+
+
+
+        private void shssyearlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     } 
 }
