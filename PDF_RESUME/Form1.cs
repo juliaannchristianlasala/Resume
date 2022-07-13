@@ -50,7 +50,7 @@ namespace PDF_RESUME
             String Award4 = resume.Award4;
 
             //Show the infos in textbox
-            rnamelabel.Text = resume.FullName;
+            namelabel.Text = "Name: " + resume.FullName;
         }
     } 
 }

@@ -30,7 +30,6 @@
         {
             this.ctostringbtn = new System.Windows.Forms.Button();
             this.namelabel = new System.Windows.Forms.Label();
-            this.rnamelabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ctostringbtn
@@ -52,21 +51,11 @@
             this.namelabel.TabIndex = 1;
             this.namelabel.Text = "Name:";
             // 
-            // rnamelabel
-            // 
-            this.rnamelabel.AutoSize = true;
-            this.rnamelabel.Location = new System.Drawing.Point(81, 86);
-            this.rnamelabel.Name = "rnamelabel";
-            this.rnamelabel.Size = new System.Drawing.Size(18, 20);
-            this.rnamelabel.TabIndex = 2;
-            this.rnamelabel.Text = "g";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 566);
-            this.Controls.Add(this.rnamelabel);
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.ctostringbtn);
             this.Name = "Form1";
@@ -80,6 +69,5 @@
 
         private Button ctostringbtn;
         private Label namelabel;
-        private Label rnamelabel;
     }
 }
