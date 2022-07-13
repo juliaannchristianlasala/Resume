@@ -17,7 +17,7 @@ namespace PDF_RESUME
 
             //Converting basic infos to String
             String FullName = resume.FullName;
-            String Age = resume.Age;
+            String Birthday = resume.Birthday;
             String Email = resume.Email;
             String PhoneNumber = resume.PhoneNumber;
             String HomeAddress = resume.HomeAddress;
