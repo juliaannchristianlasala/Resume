@@ -74,6 +74,12 @@ namespace PDF_RESUME
             skill2label.Text = resume.Skill2 + " - " + resume.Description2;
             skill3label.Text = resume.Skill3 + " - " + resume.Description3;
             skill4label.Text = resume.Skill4 + " - " + resume.Description4;
+
+            //CERTIFICATES AND ACHIEVEMENTS
+            award1label.Text = resume.Award1;
+            award2label.Text = resume.Award2;
+            award3label.Text = resume.Award3;
+            award4label.Text = resume.Award4;
         }
 
 
