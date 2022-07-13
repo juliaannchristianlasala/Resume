@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ctostringbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // ctostringbtn
+            // 
+            this.ctostringbtn.Location = new System.Drawing.Point(318, 382);
+            this.ctostringbtn.Name = "ctostringbtn";
+            this.ctostringbtn.Size = new System.Drawing.Size(124, 47);
+            this.ctostringbtn.TabIndex = 0;
+            this.ctostringbtn.Text = "convert";
+            this.ctostringbtn.UseVisualStyleBackColor = true;
+            this.ctostringbtn.Click += new System.EventHandler(this.ctostringbtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 450);
+            this.Controls.Add(this.ctostringbtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -42,5 +54,7 @@
         }
 
         #endregion
+
+        private Button ctostringbtn;
     }
 }
