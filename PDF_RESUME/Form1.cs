@@ -21,7 +21,7 @@ namespace PDF_RESUME
             String Email = resume.Email;
             String PhoneNumber = resume.PhoneNumber;
             String HomeAddress = resume.HomeAddress;
-            String City=resume.City;
+            String City = resume.City;
             String Province = resume.Province;
             String PostalCode = resume.PostalCode;
 
@@ -48,7 +48,9 @@ namespace PDF_RESUME
             String Award2 = resume.Award2;
             String Award3 = resume.Award3;
             String Award4 = resume.Award4;
-        }
-    }
 
+            //Show the infos in textbox
+            rnamelabel.Text = resume.FullName;
+        }
+    } 
 }
