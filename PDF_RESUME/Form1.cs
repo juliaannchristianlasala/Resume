@@ -27,8 +27,10 @@ namespace PDF_RESUME
 
             //Converting background education infos to String
             String HighSchool = resume.HighSchool;
-            String Strand = resume.Strand;
             String HSSchoolYear = resume.HSSchoolYear;
+            String SeniorHighSchool = resume.SeniorHighSchool;
+            String ShsStrand = resume.ShsStrand;
+            String SHSSchoolYear = resume.SHSSchoolYear;
             String College = resume.College;
             String Course = resume.Course;
             String CSchoolYear = resume.CSchoolYear;
@@ -49,12 +51,19 @@ namespace PDF_RESUME
             String Award3 = resume.Award3;
             String Award4 = resume.Award4;
 
+
             //Show the infos in textbox
+
+            //BASIC INFORMATION
             namelabel.Text = "Name: " + resume.FullName;
             bdaylabel.Text = "Birthday: " + resume.Birthday;
             emaillabel.Text = "Email: " + resume.Email;
             pnumlabel.Text = "Phone Number: " + resume.PhoneNumber;
             haddresslabel.Text = "Home Address: " + resume.HomeAddress + ", " + resume.City + ", " + resume.Province + " ("+ resume.PostalCode + ")";
+
+            //EDUCATION
+            jhschoollabel.Text = "Junior High School: " + resume.HighSchool;
+            hssyearlabel.Text = "School Year: " + resume.HSSchoolYear;
         }
     } 
 }

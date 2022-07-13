@@ -22,6 +22,9 @@ namespace PDF_RESUME
         public string HighSchool { get; set; }
         public string Strand { get; set; }
         public string HSSchoolYear { get; set; }
+        public string SeniorHighSchool { get; set; }
+        public string ShsStrand { get; set; }
+        public string SHSSchoolYear { get; set; }
         public string College { get; set; }
         public string Course { get; set; }
         public string CSchoolYear { get; set; }
