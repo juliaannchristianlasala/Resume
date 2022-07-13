@@ -45,6 +45,11 @@
             this.bgpicbox1 = new System.Windows.Forms.PictureBox();
             this.bgpicbox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sandqlabel = new System.Windows.Forms.Label();
+            this.skill1label = new System.Windows.Forms.Label();
+            this.skill2label = new System.Windows.Forms.Label();
+            this.skill3label = new System.Windows.Forms.Label();
+            this.skill4label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bgpicbox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgpicbox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -189,7 +194,7 @@
             this.pdfcreatorlabel.AutoSize = true;
             this.pdfcreatorlabel.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pdfcreatorlabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pdfcreatorlabel.Location = new System.Drawing.Point(20, 19);
+            this.pdfcreatorlabel.Location = new System.Drawing.Point(8, 19);
             this.pdfcreatorlabel.Name = "pdfcreatorlabel";
             this.pdfcreatorlabel.Size = new System.Drawing.Size(413, 46);
             this.pdfcreatorlabel.TabIndex = 12;
@@ -218,9 +223,60 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(14, 400);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(914, 174);
+            this.pictureBox1.Size = new System.Drawing.Size(914, 145);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // sandqlabel
+            // 
+            this.sandqlabel.AutoSize = true;
+            this.sandqlabel.BackColor = System.Drawing.Color.White;
+            this.sandqlabel.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sandqlabel.Location = new System.Drawing.Point(23, 409);
+            this.sandqlabel.Name = "sandqlabel";
+            this.sandqlabel.Size = new System.Drawing.Size(60, 20);
+            this.sandqlabel.TabIndex = 16;
+            this.sandqlabel.Text = "Skillls:";
+            // 
+            // skill1label
+            // 
+            this.skill1label.AutoSize = true;
+            this.skill1label.BackColor = System.Drawing.Color.White;
+            this.skill1label.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.skill1label.Location = new System.Drawing.Point(23, 434);
+            this.skill1label.Name = "skill1label";
+            this.skill1label.Size = new System.Drawing.Size(0, 20);
+            this.skill1label.TabIndex = 17;
+            // 
+            // skill2label
+            // 
+            this.skill2label.AutoSize = true;
+            this.skill2label.BackColor = System.Drawing.Color.White;
+            this.skill2label.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.skill2label.Location = new System.Drawing.Point(23, 460);
+            this.skill2label.Name = "skill2label";
+            this.skill2label.Size = new System.Drawing.Size(0, 20);
+            this.skill2label.TabIndex = 18;
+            // 
+            // skill3label
+            // 
+            this.skill3label.AutoSize = true;
+            this.skill3label.BackColor = System.Drawing.Color.White;
+            this.skill3label.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.skill3label.Location = new System.Drawing.Point(23, 487);
+            this.skill3label.Name = "skill3label";
+            this.skill3label.Size = new System.Drawing.Size(0, 20);
+            this.skill3label.TabIndex = 19;
+            // 
+            // skill4label
+            // 
+            this.skill4label.AutoSize = true;
+            this.skill4label.BackColor = System.Drawing.Color.White;
+            this.skill4label.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.skill4label.Location = new System.Drawing.Point(23, 514);
+            this.skill4label.Name = "skill4label";
+            this.skill4label.Size = new System.Drawing.Size(0, 20);
+            this.skill4label.TabIndex = 20;
             // 
             // Form1
             // 
@@ -228,6 +284,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(940, 712);
+            this.Controls.Add(this.skill4label);
+            this.Controls.Add(this.skill3label);
+            this.Controls.Add(this.skill2label);
+            this.Controls.Add(this.skill1label);
+            this.Controls.Add(this.sandqlabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pdfcreatorlabel);
             this.Controls.Add(this.shssyearlabel);
@@ -246,6 +307,7 @@
             this.Controls.Add(this.bgpicbox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF RESUME CREATOR";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bgpicbox1)).EndInit();
@@ -274,5 +336,10 @@
         private PictureBox bgpicbox1;
         private PictureBox bgpicbox2;
         private PictureBox pictureBox1;
+        private Label sandqlabel;
+        private Label skill1label;
+        private Label skill2label;
+        private Label skill3label;
+        private Label skill4label;
     }
 }

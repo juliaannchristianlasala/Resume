@@ -13,7 +13,7 @@ namespace PDF_RESUME
             String json_file = (@"C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\inforesume.json");
             String sJson = File.ReadAllText(json_file);
             Infos resume = JsonSerializer.Deserialize<Infos>(sJson)!;
-            MessageBox.Show("Information Converted");
+            MessageBox.Show("Information Found");
 
             //Converting basic infos to String
             String FullName = resume.FullName;
@@ -70,7 +70,10 @@ namespace PDF_RESUME
             csyearlabel.Text = "School Year: " + resume.CSchoolYear;
 
             //SKILLS AND QUALIFICATIONS
-
+            skill1label.Text = resume.Skill1 + " - " + resume.Description1;
+            skill2label.Text = resume.Skill2 + " - " + resume.Description2;
+            skill3label.Text = resume.Skill3 + " - " + resume.Description3;
+            skill4label.Text = resume.Skill4 + " - " + resume.Description4;
         }
 
 
