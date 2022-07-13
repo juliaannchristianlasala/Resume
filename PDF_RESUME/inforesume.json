@@ -1,5 +1,5 @@
 {
-  "BASIC INFORMATION": [
+  "INFORMATIONS": [
     {
       "Picture": "",
       "Name": "Julia-Ann Christian Ramirez Lasala",
@@ -9,22 +9,14 @@
       "HomeAddress": "#52 President Quezon Street, Barangay Commonwealth",
       "City": "Quezon City",
       "Province": "Metro Manila",
-      "PostalCode": "1121"
-    }
-  ],
-  "EDUCATION": [
-    {
+      "PostalCode": "1121",
       "HighSchool": "North Fairview High School",
       "HSSchoolYear": "S.Y. 2015-2019",
       "SeniorHighSchool": "Metropolitan Institute of Arts and Sciences",
       "Strand": "Science, Technology, Engineering and Mathematics",
       "SHSSchoolYear": "S.Y. 2019-2021",
       "College": "Polytechbic University of the Philippines",
-      "CSchoolYear": "S.Y. 2021-Present"
-    }
-  ],
-  "SKILLS AND QUALIFICATIONS": [
-    {
+      "CSchoolYear": "S.Y. 2021-Present",
       "Skill1": "Creativity",
       "Description1": "Ability to use imagination to generate new ideas",
       "Skill2": "Conceptual",
@@ -32,11 +24,7 @@
       "Skill3": "Responsibility",
       "Description3": "Accepts responsibility for the job and even acknowledges mistakes",
       "Skill4": "Empathy",
-      "Description4": "Communicating and learning about other people to express thoughts and ideas through words, art, or other things"
-    }
-  ],
-  "CERTIFICATES AND ACHIEVEMENTS": [
-    {
+      "Description4": "Communicating and learning about other people to express thoughts and ideas through words, art, or other things",
       "Award1": "Certificate of Recognition, Coffee Painting (First place)",
       "Award2": "Certificate of Participation, Sketch Fest 'BayaniJuan'",
       "Award3": "Certificate of Participation, Calligraphy Contest",
