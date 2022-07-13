@@ -51,6 +51,10 @@ namespace PDF_RESUME
 
             //Show the infos in textbox
             namelabel.Text = "Name: " + resume.FullName;
+            bdaylabel.Text = "Birthday: " + resume.Birthday;
+            emaillabel.Text = "Email: " + resume.Email;
+            pnumlabel.Text = "Phone Number: " + resume.PhoneNumber;
+            haddresslabel.Text = "Home Address: " + resume.HomeAddress + ", " + resume.City + ", " + resume.Province + " ("+ resume.PostalCode + ")";
         }
     } 
 }
