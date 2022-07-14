@@ -150,24 +150,29 @@ namespace PDF_RESUME
             {
                 pdffile.InitialDirectory = (@"C:\Users\JULIA-ANN\source\repos\resume");
                 pdffile.FileName = LastName + "_" + FirstName + ".pdf";
+                pdffile.Filter = "PDF|*.pdf";
 
                 if (pdffile.ShowDialog() == DialogResult.OK)
                 {
                     PdfDocument pdf_resume = new PdfDocument();
                     PdfPage pdf_page = pdf_resume.AddPage();
-                    pdf_resume.Info.Title = "RESUME";
+                    pdf_resume.Info.Title = "MY RESUME";
                     
                     XGraphics grphcs = XGraphics.FromPdfPage(pdf_page);
 
-                    grphcs.DrawRoundedRectangle(XBrushes.LightPink, 0, 0, pdf_page.Width.Point, pdf_page.Width.Point, 30, 20);
-                    int marginright = 430;
-                    
+                    //Background Color
+                    grphcs.DrawRoundedRectangle(XBrushes.PeachPuff, 0, 0, pdf_page.Width.Point, pdf_page.Height.Point, 0, 0);
+                    grphcs.DrawRoundedRectangle(XBrushes.PapayaWhip, 20, 20, pdf_page.Width.Point, pdf_page.Height.Point, 20, 20);
+
+
+                    //int marginright = 430;
                     //Putting picture in pdf that is not in json file
-                    String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
-                    XImage mypic =XImage.FromFile(pic1x1);
-                    grphcs.DrawImage(mypic, marginright, 50, 150, 150);
+                    //String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
+                    //XImage mypic =XImage.FromFile(pic1x1);
+                    //grphcs.DrawImage(mypic, marginright, 50, 150, 150);
 
                     pdf_resume.Save(pdffile.FileName);
+                    Application.Exit();
                 }
             }
         }
