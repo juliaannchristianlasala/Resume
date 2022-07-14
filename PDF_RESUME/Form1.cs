@@ -165,17 +165,26 @@ namespace PDF_RESUME
                     grphcs.DrawRoundedRectangle(XBrushes.PapayaWhip, 20, 20, pdf_page.Width.Point, pdf_page.Height.Point, 20, 20);
 
                     //Fonts
-                    XFont forname = new XFont("Arial Black", 20, XFontStyle.Bold);
+                    XFont forname = new XFont("Arial Black", 30, XFontStyle.Bold);
                     XFont forbtxt = new XFont("Georgia", 18, XFontStyle.Bold);
                     XFont forstxt = new XFont("Georgia", 16, XFontStyle.Regular);
 
-                 
+                    //Margin
+                    int left = 50;
+                    int down = 200;
 
-                    //int marginright = 430;
                     //Putting picture in pdf that is not in json file
-                    //String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
-                    //XImage mypic =XImage.FromFile(pic1x1);
-                    //grphcs.DrawImage(mypic, marginright, 50, 150, 150);
+                    String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
+                    XImage mypic = XImage.FromFile(pic1x1);
+
+                    //- papunta sa left, + papunta sa right
+                    //mas mababa, pataas
+                    grphcs.DrawImage(mypic, left + 0, 45, 150, 180);
+
+                    //+ papunta sa right, - mas malaki minus pataas
+                    //Full Name
+                    grphcs.DrawString(FirstName, forname, XBrushes.Black, new XRect(left + 180, down - 140, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                    grphcs.DrawString(MiddleName + " " + LastName, forname, XBrushes.Black, new XRect(left + 180, down - 100, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
 
                     pdf_resume.Save(pdffile.FileName);
                     Application.Exit();
