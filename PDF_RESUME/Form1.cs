@@ -109,9 +109,6 @@ namespace PDF_RESUME
             Infos resume = JsonSerializer.Deserialize<Infos>(sJson)!;
 
             //Converting basic infos to String
-            String FirstName = resume.FirstName;
-            String MiddleName = resume.MiddleName;
-            String LastName = resume.LastName;
             String Birthday = resume.Birthday;
             String Email = resume.Email;
             String PhoneNumber = resume.PhoneNumber;
@@ -173,18 +170,27 @@ namespace PDF_RESUME
                     int left = 50;
                     int down = 200;
 
-                    //Putting picture in pdf that is not in json file
-                    String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
-                    XImage mypic = XImage.FromFile(pic1x1);
+                    {   // PICTURE
+                        
+                        String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
+                        XImage mypic = XImage.FromFile(pic1x1);
 
-                    //- papunta sa left, + papunta sa right
-                    //mas mababa, pataas
-                    grphcs.DrawImage(mypic, left + 0, 45, 150, 180);
+                        // - papunta sa left, + papunta sa right
+                        // mas mababa, pataas
+                        grphcs.DrawImage(mypic, left + 0, 45, 150, 180);
+                    }
 
-                    //+ papunta sa right, - mas malaki minus pataas
-                    //Full Name
-                    grphcs.DrawString(FirstName, forname, XBrushes.Black, new XRect(left + 180, down - 140, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                    grphcs.DrawString(MiddleName + " " + LastName, forname, XBrushes.Black, new XRect(left + 180, down - 100, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                    {  // FULL NAME
+
+                        String FirstName = resume.FirstName;
+                        String MiddleName = resume.MiddleName;
+                        String LastName = resume.LastName;
+
+                        // + papunta sa right, - mas malaki minus pataas
+                        grphcs.DrawString(FirstName, forname, XBrushes.Black, new XRect(left + 180, down - 140, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(MiddleName + " " + LastName, forname, XBrushes.Black, new XRect(left + 180, down - 100, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                    }
+
 
                     pdf_resume.Save(pdffile.FileName);
                     Application.Exit();
