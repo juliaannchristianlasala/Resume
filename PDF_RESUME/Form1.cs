@@ -107,9 +107,44 @@ namespace PDF_RESUME
             String json_file = (@"C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\inforesume.json");
             String sJson = File.ReadAllText(json_file);
             Infos resume = JsonSerializer.Deserialize<Infos>(sJson)!;
-    
+
+            //Converting basic infos to String
             String FirstName = resume.FirstName;
+            String MiddleName = resume.MiddleName;
             String LastName = resume.LastName;
+            String Birthday = resume.Birthday;
+            String Email = resume.Email;
+            String PhoneNumber = resume.PhoneNumber;
+            String HomeAddress = resume.HomeAddress;
+            String City = resume.City;
+            String Province = resume.Province;
+            String PostalCode = resume.PostalCode;
+
+            //Converting background education infos to String
+            String HighSchool = resume.HighSchool;
+            String HSSchoolYear = resume.HSSchoolYear;
+            String SeniorHighSchool = resume.SeniorHighSchool;
+            String ShsStrand = resume.ShsStrand;
+            String SHSSchoolYear = resume.SHSSchoolYear;
+            String College = resume.College;
+            String Course = resume.Course;
+            String CSchoolYear = resume.CSchoolYear;
+
+            //Converting skills and qualification infos to String
+            String Skill1 = resume.Skill1;
+            String Description1 = resume.Description1;
+            String Skill2 = resume.Skill2;
+            String Description2 = resume.Description2;
+            String Skill3 = resume.Skill3;
+            String Description3 = resume.Description3;
+            String Skill4 = resume.Skill4;
+            String Description4 = resume.Description4;
+
+            //Converting certificate and achievements info to String
+            String Award1 = resume.Award1;
+            String Award2 = resume.Award2;
+            String Award3 = resume.Award3;
+            String Award4 = resume.Award4;
 
             using (SaveFileDialog pdffile = new SaveFileDialog())
             {
@@ -123,6 +158,7 @@ namespace PDF_RESUME
                     pdf_resume.Info.Title = "RESUME";
                     
                     XGraphics grphcs = XGraphics.FromPdfPage(pdf_page);
+
                     grphcs.DrawRoundedRectangle(XBrushes.LightPink, 0, 0, pdf_page.Width.Point, pdf_page.Width.Point, 30, 20);
                     int marginright = 430;
                     
