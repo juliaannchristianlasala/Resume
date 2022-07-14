@@ -9,7 +9,9 @@ namespace PDF_RESUME
     public class Infos
     {
         //BASIC INFORMATION
-        public string FullName { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
         public string Birthday { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
@@ -20,7 +22,6 @@ namespace PDF_RESUME
 
         //EDUCATION
         public string HighSchool { get; set; }
-        public string Strand { get; set; }
         public string HSSchoolYear { get; set; }
         public string SeniorHighSchool { get; set; }
         public string ShsStrand { get; set; }

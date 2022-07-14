@@ -351,7 +351,7 @@
             // 
             this.pdfconverterbutton.BackColor = System.Drawing.Color.White;
             this.pdfconverterbutton.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pdfconverterbutton.Location = new System.Drawing.Point(371, 745);
+            this.pdfconverterbutton.Location = new System.Drawing.Point(371, 732);
             this.pdfconverterbutton.Name = "pdfconverterbutton";
             this.pdfconverterbutton.Size = new System.Drawing.Size(211, 46);
             this.pdfconverterbutton.TabIndex = 27;
@@ -361,11 +361,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(185, 713);
+            this.label1.Location = new System.Drawing.Point(216, 708);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(587, 24);
+            this.label1.Size = new System.Drawing.Size(500, 20);
             this.label1.TabIndex = 28;
             this.label1.Text = "This information from JSON file will be converted in to PDF file.";
             // 
@@ -374,7 +374,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(940, 801);
+            this.ClientSize = new System.Drawing.Size(940, 785);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pdfconverterbutton);
             this.Controls.Add(this.award4label);

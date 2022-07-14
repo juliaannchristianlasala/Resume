@@ -16,7 +16,9 @@ namespace PDF_RESUME
             MessageBox.Show("Information Found");
 
             //Converting basic infos to String
-            String FullName = resume.FullName;
+            String FirstName = resume.FirstName;
+            String MiddleName = resume.MiddleName;
+            String LastName = resume.LastName;
             String Birthday = resume.Birthday;
             String Email = resume.Email;
             String PhoneNumber = resume.PhoneNumber;
@@ -55,7 +57,7 @@ namespace PDF_RESUME
             //Show the infos in textbox
 
             //BASIC INFORMATION
-            namelabel.Text = "Name: " + resume.FullName;
+            namelabel.Text = "Name: " + resume.FirstName + " " + resume.MiddleName + " " + resume.LastName;
             bdaylabel.Text = "Birthday: " + resume.Birthday;
             emaillabel.Text = "Email: " + resume.Email;
             pnumlabel.Text = "Phone Number: " + resume.PhoneNumber;
