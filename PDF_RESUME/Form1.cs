@@ -160,10 +160,16 @@ namespace PDF_RESUME
                     
                     XGraphics grphcs = XGraphics.FromPdfPage(pdf_page);
 
-                    //Background Color
+                    //Background
                     grphcs.DrawRoundedRectangle(XBrushes.PeachPuff, 0, 0, pdf_page.Width.Point, pdf_page.Height.Point, 0, 0);
                     grphcs.DrawRoundedRectangle(XBrushes.PapayaWhip, 20, 20, pdf_page.Width.Point, pdf_page.Height.Point, 20, 20);
 
+                    //Fonts
+                    XFont forname = new XFont("Arial Black", 20, XFontStyle.Bold);
+                    XFont forbtxt = new XFont("Georgia", 18, XFontStyle.Bold);
+                    XFont forstxt = new XFont("Georgia", 16, XFontStyle.Regular);
+
+                 
 
                     //int marginright = 430;
                     //Putting picture in pdf that is not in json file
