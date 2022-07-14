@@ -1,4 +1,10 @@
 using System.Text.Json;
+using PdfSharp;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System.Diagnostics;
+using System.Text;
+
 namespace PDF_RESUME
 {
     public partial class Form1 : Form
@@ -6,6 +12,7 @@ namespace PDF_RESUME
         public Form1()
         {
             InitializeComponent();
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
         }
 
         private void ctostringbtn_Click(object sender, EventArgs e)
@@ -13,7 +20,6 @@ namespace PDF_RESUME
             String json_file = (@"C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\inforesume.json");
             String sJson = File.ReadAllText(json_file);
             Infos resume = JsonSerializer.Deserialize<Infos>(sJson)!;
-            MessageBox.Show("Information Found");
 
             //Converting basic infos to String
             String FirstName = resume.FirstName;
@@ -57,7 +63,7 @@ namespace PDF_RESUME
             //Show the infos in textbox
 
             //BASIC INFORMATION
-            namelabel.Text = "Name: " + resume.FirstName + " " + resume.MiddleName + " " + resume.LastName;
+            namelabel.Text = "Name: " + resume.LastName + ", " + resume.FirstName + " " + resume.MiddleName;
             bdaylabel.Text = "Birthday: " + resume.Birthday;
             emaillabel.Text = "Email: " + resume.Email;
             pnumlabel.Text = "Phone Number: " + resume.PhoneNumber;
@@ -85,8 +91,6 @@ namespace PDF_RESUME
         }
 
 
-
-
         private void shssyearlabel_Click(object sender, EventArgs e)
         {
 
@@ -94,7 +98,42 @@ namespace PDF_RESUME
 
         private void Form1_Load(object sender, EventArgs e)
         {
+    
+        }
 
+        //Convert Json file to PDF file
+        private void pdfconverterbutton_Click(object sender, EventArgs e)
+        {
+            String json_file = (@"C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\inforesume.json");
+            String sJson = File.ReadAllText(json_file);
+            Infos resume = JsonSerializer.Deserialize<Infos>(sJson)!;
+    
+            String FirstName = resume.FirstName;
+            String LastName = resume.LastName;
+
+            using (SaveFileDialog pdffile = new SaveFileDialog())
+            {
+                pdffile.InitialDirectory = (@"C:\Users\JULIA-ANN\source\repos\resume");
+                pdffile.FileName = LastName + "_" + FirstName + ".pdf";
+
+                if (pdffile.ShowDialog() == DialogResult.OK)
+                {
+                    PdfDocument pdf_resume = new PdfDocument();
+                    PdfPage pdf_page = pdf_resume.AddPage();
+                    pdf_resume.Info.Title = "RESUME";
+                    
+                    XGraphics grphcs = XGraphics.FromPdfPage(pdf_page);
+                    grphcs.DrawRoundedRectangle(XBrushes.LightPink, 0, 0, pdf_page.Width.Point, pdf_page.Width.Point, 30, 20);
+                    int marginright = 430;
+                    
+                    //Putting picture in pdf that is not in json file
+                    String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
+                    XImage mypic =XImage.FromFile(pic1x1);
+                    grphcs.DrawImage(mypic, marginright, 50, 150, 150);
+
+                    pdf_resume.Save(pdffile.FileName);
+                }
+            }
         }
     } 
 }

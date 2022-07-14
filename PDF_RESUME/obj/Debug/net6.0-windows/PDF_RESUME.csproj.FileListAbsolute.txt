@@ -17,3 +17,7 @@ C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\obj\Debug\net6.0-windows\r
 C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\obj\Debug\net6.0-windows\PDF_RESUME.pdb
 C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\obj\Debug\net6.0-windows\PDF_RESUME.genruntimeconfig.cache
 C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\obj\Debug\net6.0-windows\ref\PDF_RESUME.dll
+C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\bin\Debug\net6.0-windows\PdfSharp.Charting.dll
+C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\bin\Debug\net6.0-windows\PdfSharp.dll
+C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\bin\Debug\net6.0-windows\de\PdfSharp.Charting.resources.dll
+C:\Users\JULIA-ANN\source\repos\PDF_RESUME\PDF_RESUME\bin\Debug\net6.0-windows\de\PdfSharp.resources.dll

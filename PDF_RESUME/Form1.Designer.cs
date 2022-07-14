@@ -357,6 +357,7 @@
             this.pdfconverterbutton.TabIndex = 27;
             this.pdfconverterbutton.Text = "Convert to PDF";
             this.pdfconverterbutton.UseVisualStyleBackColor = false;
+            this.pdfconverterbutton.Click += new System.EventHandler(this.pdfconverterbutton_Click);
             // 
             // label1
             // 
