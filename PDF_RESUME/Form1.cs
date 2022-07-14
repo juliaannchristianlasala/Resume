@@ -108,40 +108,9 @@ namespace PDF_RESUME
             String sJson = File.ReadAllText(json_file);
             Infos resume = JsonSerializer.Deserialize<Infos>(sJson)!;
 
-            //Converting basic infos to String
-            String Birthday = resume.Birthday;
-            String Email = resume.Email;
-            String PhoneNumber = resume.PhoneNumber;
-            String HomeAddress = resume.HomeAddress;
-            String City = resume.City;
-            String Province = resume.Province;
-            String PostalCode = resume.PostalCode;
-
-            //Converting background education infos to String
-            String HighSchool = resume.HighSchool;
-            String HSSchoolYear = resume.HSSchoolYear;
-            String SeniorHighSchool = resume.SeniorHighSchool;
-            String ShsStrand = resume.ShsStrand;
-            String SHSSchoolYear = resume.SHSSchoolYear;
-            String College = resume.College;
-            String Course = resume.Course;
-            String CSchoolYear = resume.CSchoolYear;
-
-            //Converting skills and qualification infos to String
-            String Skill1 = resume.Skill1;
-            String Description1 = resume.Description1;
-            String Skill2 = resume.Skill2;
-            String Description2 = resume.Description2;
-            String Skill3 = resume.Skill3;
-            String Description3 = resume.Description3;
-            String Skill4 = resume.Skill4;
-            String Description4 = resume.Description4;
-
-            //Converting certificate and achievements info to String
-            String Award1 = resume.Award1;
-            String Award2 = resume.Award2;
-            String Award3 = resume.Award3;
-            String Award4 = resume.Award4;
+            String FirstName = resume.FirstName;
+            String MiddleName = resume.MiddleName;
+            String LastName = resume.LastName;
 
             using (SaveFileDialog pdffile = new SaveFileDialog())
             {
@@ -171,7 +140,6 @@ namespace PDF_RESUME
                     int down = 200;
 
                     {   // PICTURE
-                        
                         String pic1x1 = (@"C:\Users\JULIA-ANN\source\repos\Julia\JULIA.jpg");
                         XImage mypic = XImage.FromFile(pic1x1);
 
@@ -180,17 +148,60 @@ namespace PDF_RESUME
                         grphcs.DrawImage(mypic, left + 0, 45, 150, 180);
                     }
 
-                    {  // FULL NAME
-
-                        String FirstName = resume.FirstName;
-                        String MiddleName = resume.MiddleName;
-                        String LastName = resume.LastName;
-
+                    {  
+                        // FULL NAME
                         // + papunta sa right, - mas malaki minus pataas
                         grphcs.DrawString(FirstName, forname, XBrushes.Black, new XRect(left + 180, down - 140, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                         grphcs.DrawString(MiddleName + " " + LastName, forname, XBrushes.Black, new XRect(left + 180, down - 100, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
+                    {   
+                        // BASIC INFOS
+                        String Birthday = resume.Birthday;
+                        String Email = resume.Email;
+                        String PhoneNumber = resume.PhoneNumber;
+                        String HomeAddress = resume.HomeAddress;
+                        String City = resume.City;
+                        String Province = resume.Province;
+                        String PostalCode = resume.PostalCode;
+
+                        grphcs.DrawString("Birthday: " + Birthday, forstxt, XBrushes.Black, new XRect(left + 180, down - 55, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Email: " + Email, forstxt, XBrushes.Black, new XRect(left + 180, down - 35, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Phone Number: " + PhoneNumber, forstxt, XBrushes.Black, new XRect(left + 180, down - 15, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Home Address: " + HomeAddress, forstxt, XBrushes.Black, new XRect(left + 180, down +5, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                    }
+
+                    {   
+                        // BACKGROUND EDUCATION
+                        String HighSchool = resume.HighSchool;
+                        String HSSchoolYear = resume.HSSchoolYear;
+                        String SeniorHighSchool = resume.SeniorHighSchool;
+                        String ShsStrand = resume.ShsStrand;
+                        String SHSSchoolYear = resume.SHSSchoolYear;
+                        String College = resume.College;
+                        String Course = resume.Course;
+                        String CSchoolYear = resume.CSchoolYear;
+                    }
+
+                    {   
+                        //SKILLS AND QUALIFICATIONS
+                        String Skill1 = resume.Skill1;
+                        String Description1 = resume.Description1;
+                        String Skill2 = resume.Skill2;
+                        String Description2 = resume.Description2;
+                        String Skill3 = resume.Skill3;
+                        String Description3 = resume.Description3;
+                        String Skill4 = resume.Skill4;
+                        String Description4 = resume.Description4;
+                    }
+
+                    {   
+                        //CERTIFICATES AND ACHIEVEMENTS
+                        String Award1 = resume.Award1;
+                        String Award2 = resume.Award2;
+                        String Award3 = resume.Award3;
+                        String Award4 = resume.Award4;
+                    }
 
                     pdf_resume.Save(pdffile.FileName);
                     Application.Exit();
