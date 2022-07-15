@@ -131,7 +131,7 @@ namespace PDF_RESUME
                     grphcs.DrawRoundedRectangle(XBrushes.PapayaWhip, 20, 20, pdf_page.Width.Point, pdf_page.Height.Point, 20, 20);
 
                     //Fonts
-                    XFont forname = new XFont("Arial Black", 30, XFontStyle.Bold);
+                    XFont forname = new XFont("Arial Black", 35, XFontStyle.Bold);
                     XFont forbtxt = new XFont("Georgia", 18, XFontStyle.Bold);
                     XFont forstxt = new XFont("Georgia", 16, XFontStyle.Regular);
 
@@ -145,14 +145,14 @@ namespace PDF_RESUME
 
                         // - papunta sa left, + papunta sa right
                         // mas mababa, pataas
-                        grphcs.DrawImage(mypic, left + 0, 45, 150, 180);
+                        grphcs.DrawImage(mypic, left + 0, 45, 110, 130);
                     }
 
                     {  
                         // FULL NAME
                         // + papunta sa right, - mas malaki minus pataas
-                        grphcs.DrawString(FirstName, forname, XBrushes.Black, new XRect(left + 180, down - 140, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString(MiddleName + " " + LastName, forname, XBrushes.Black, new XRect(left + 180, down - 100, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(FirstName, forname, XBrushes.Black, new XRect(left + 130, down - 140, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(MiddleName + " " + LastName, forname, XBrushes.Black, new XRect(left + 160, down - 100, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
@@ -165,10 +165,12 @@ namespace PDF_RESUME
                         String Province = resume.Province;
                         String PostalCode = resume.PostalCode;
 
-                        grphcs.DrawString("Birthday: " + Birthday, forstxt, XBrushes.Black, new XRect(left + 180, down - 55, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Email: " + Email, forstxt, XBrushes.Black, new XRect(left + 180, down - 35, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Phone Number: " + PhoneNumber, forstxt, XBrushes.Black, new XRect(left + 180, down - 15, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Home Address: " + HomeAddress, forstxt, XBrushes.Black, new XRect(left + 180, down +5, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("BASIC INFORMATION", forbtxt, XBrushes.Black, new XRect(left + 0, down - 15, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Birthday: " + Birthday, forstxt, XBrushes.Black, new XRect(left + 5, down + 10, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Email: " + Email, forstxt, XBrushes.Black, new XRect(left + 5, down + 30, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Phone Number: " + PhoneNumber, forstxt, XBrushes.Black, new XRect(left + 5, down + 50, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Home Address: " + HomeAddress + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 70, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( City + ", " + PostalCode, forstxt, XBrushes.Black, new XRect(left + 120, down + 90, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
