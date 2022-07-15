@@ -134,6 +134,7 @@ namespace PDF_RESUME
                     XFont forname = new XFont("Arial Black", 35, XFontStyle.Bold);
                     XFont forbtxt = new XFont("Georgia", 18, XFontStyle.Bold);
                     XFont forstxt = new XFont("Georgia", 16, XFontStyle.Regular);
+                    XFont forxstxt = new XFont("Georgia", 12, XFontStyle.Regular);
 
                     //Margin
                     int left = 50;
@@ -170,7 +171,7 @@ namespace PDF_RESUME
                         grphcs.DrawString("Email: " + Email, forstxt, XBrushes.Black, new XRect(left + 5, down + 30, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                         grphcs.DrawString("Phone Number: " + PhoneNumber, forstxt, XBrushes.Black, new XRect(left + 5, down + 50, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                         grphcs.DrawString("Home Address: " + HomeAddress + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 70, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( City + ", " + PostalCode, forstxt, XBrushes.Black, new XRect(left + 120, down + 90, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( City + ", " + PostalCode, forstxt, XBrushes.Black, new XRect(left + 120, down + 85, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
@@ -184,15 +185,15 @@ namespace PDF_RESUME
                         String Course = resume.Course;
                         String CSchoolYear = resume.CSchoolYear;
 
-                        grphcs.DrawString("BACKGROUND EDUCATION", forbtxt, XBrushes.Black, new XRect(left + 0, down +130, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Junior High School: " + HighSchool, forstxt, XBrushes.Black, new XRect(left + 5, down + 155, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("School Year: " + HSSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 175, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Senior High School: " + SeniorHighSchool, forstxt, XBrushes.Black, new XRect(left + 5, down + 195, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Strand: " + ShsStrand + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 215, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("School Year: " + SHSSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 235, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("College: " + College, forstxt, XBrushes.Black, new XRect(left + 5, down + 255, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("Course: " + Course + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 275, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString("School Year: " + CSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 295, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("BACKGROUND EDUCATION", forbtxt, XBrushes.Black, new XRect(left + 0, down +120, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Junior High School: " + HighSchool, forstxt, XBrushes.Black, new XRect(left + 5, down + 145, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("School Year: " + HSSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 165, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Senior High School: " + SeniorHighSchool, forstxt, XBrushes.Black, new XRect(left + 5, down + 185, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Strand: " + ShsStrand + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 205, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("School Year: " + SHSSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 225, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("College: " + College, forstxt, XBrushes.Black, new XRect(left + 5, down + 245, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Course: " + Course + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 265, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("School Year: " + CSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 285, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
@@ -205,6 +206,16 @@ namespace PDF_RESUME
                         String Description3 = resume.Description3;
                         String Skill4 = resume.Skill4;
                         String Description4 = resume.Description4;
+
+                        grphcs.DrawString("SKILLS AND QUALIFICATIONS", forbtxt, XBrushes.Black, new XRect(left + 0, down + 320, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill1 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 345, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description1, forxstxt, XBrushes.Black, new XRect(left + 5, down + 363, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill2 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 380, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description2, forxstxt, XBrushes.Black, new XRect(left + 5, down + 398, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill3 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 415, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description3, forxstxt, XBrushes.Black, new XRect(left + 5, down + 433, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill4 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 450, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description4, forxstxt, XBrushes.Black, new XRect(left + 5, down + 468, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
