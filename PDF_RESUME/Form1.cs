@@ -183,6 +183,16 @@ namespace PDF_RESUME
                         String College = resume.College;
                         String Course = resume.Course;
                         String CSchoolYear = resume.CSchoolYear;
+
+                        grphcs.DrawString("BACKGROUND EDUCATION", forbtxt, XBrushes.Black, new XRect(left + 0, down +130, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Junior High School: " + HighSchool, forstxt, XBrushes.Black, new XRect(left + 5, down + 155, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("School Year: " + HSSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 175, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Senior High School: " + SeniorHighSchool, forstxt, XBrushes.Black, new XRect(left + 5, down + 195, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Strand: " + ShsStrand + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 215, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("School Year: " + SHSSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 235, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("College: " + College, forstxt, XBrushes.Black, new XRect(left + 5, down + 255, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("Course: " + Course + ",", forstxt, XBrushes.Black, new XRect(left + 5, down + 275, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString("School Year: " + CSchoolYear, forstxt, XBrushes.Black, new XRect(left + 5, down + 295, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
