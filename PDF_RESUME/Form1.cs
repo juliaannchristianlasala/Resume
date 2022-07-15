@@ -209,13 +209,13 @@ namespace PDF_RESUME
 
                         grphcs.DrawString("SKILLS AND QUALIFICATIONS", forbtxt, XBrushes.Black, new XRect(left + 0, down + 320, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                         grphcs.DrawString( Skill1 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 345, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Description1, forxstxt, XBrushes.Black, new XRect(left + 5, down + 363, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Skill2 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 380, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Description2, forxstxt, XBrushes.Black, new XRect(left + 5, down + 398, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Skill3 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 415, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Description3, forxstxt, XBrushes.Black, new XRect(left + 5, down + 433, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Skill4 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 450, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
-                        grphcs.DrawString( Description4, forxstxt, XBrushes.Black, new XRect(left + 5, down + 468, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description1, forxstxt, XBrushes.Black, new XRect(left + 5, down + 365, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill2 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 385, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description2, forxstxt, XBrushes.Black, new XRect(left + 5, down + 405, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill3 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 425, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description3, forxstxt, XBrushes.Black, new XRect(left + 5, down + 445, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Skill4 + ":", forstxt, XBrushes.Black, new XRect(left + 5, down + 465, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString( Description4, forxstxt, XBrushes.Black, new XRect(left + 5, down + 485, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     {   
@@ -224,6 +224,12 @@ namespace PDF_RESUME
                         String Award2 = resume.Award2;
                         String Award3 = resume.Award3;
                         String Award4 = resume.Award4;
+
+                        grphcs.DrawString("CERTIFICATES AND ACHIEVEMENTS", forbtxt, XBrushes.Black, new XRect(left + 0, down + 515, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(Award1, forstxt, XBrushes.Black, new XRect(left + 5, down + 540, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(Award2, forstxt, XBrushes.Black, new XRect(left + 5, down + 560, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(Award3, forstxt, XBrushes.Black, new XRect(left + 5, down + 580, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
+                        grphcs.DrawString(Award4, forstxt, XBrushes.Black, new XRect(left + 5, down + 600, pdf_page.Width.Point, pdf_page.Height.Point), XStringFormats.TopLeft);
                     }
 
                     pdf_resume.Save(pdffile.FileName);
