@@ -351,7 +351,7 @@
             // 
             this.pdfconverterbutton.BackColor = System.Drawing.Color.White;
             this.pdfconverterbutton.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pdfconverterbutton.Location = new System.Drawing.Point(371, 732);
+            this.pdfconverterbutton.Location = new System.Drawing.Point(371, 734);
             this.pdfconverterbutton.Name = "pdfconverterbutton";
             this.pdfconverterbutton.Size = new System.Drawing.Size(211, 46);
             this.pdfconverterbutton.TabIndex = 27;
@@ -375,7 +375,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(940, 785);
+            this.ClientSize = new System.Drawing.Size(940, 798);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pdfconverterbutton);
             this.Controls.Add(this.award4label);
